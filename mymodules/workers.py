@@ -11,6 +11,7 @@ settings.init()
 options = Options()
 
 options.add_argument('--headless=new')
+options.page_load_strategy = 'normal'
 
 #
 # "The team owning Headleass Chrome has decided not to support extensions."...
@@ -55,14 +56,14 @@ def take_screenshot(index, url):
         #driver = ts_init.q.get()
 
         # reset window size (especially width)
-        driver.set_window_size(1800, 10)
+        #driver.set_window_size(1800, 10)
 
         # each url
         driver.get(url)
         page_width = driver.execute_script('return document.body.scrollWidth')
         page_height = driver.execute_script('return document.body.scrollHeight')
         driver.set_window_size(page_width, page_height)
-        time.sleep(2)
+        time.sleep(5)
 
         bool_save_result = driver.save_screenshot(take_screenshot.SCREENSHOT_DIR + '/' + image_filename)
         if bool_save_result == False:

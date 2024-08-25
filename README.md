@@ -1,4 +1,4 @@
-# Take the screenshot of the specified URLs.
+# Take screenshot(s) of specified URLs.
 * Saves a full screen screenshot as a png image file.
 * The browser is not visually displayed because chromedriver is running in headless mode to capture the full screen.
 * Since chrome in eadless mode does not support BASIC authentication, this tool does not support BASIC authentication either.
